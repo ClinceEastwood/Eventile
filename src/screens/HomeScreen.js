@@ -5,7 +5,7 @@ import { colors } from "../assets/colors";
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    title: "Welcome"
+    title: "Home"
   };
   render() {
     const { navigate } = this.props.navigation;
@@ -18,7 +18,7 @@ export default class HomeScreen extends Component {
           flex: 1
         }}
       >
-        <Text style={{ color: colors.primaryTextColor }}>
+        <Text style={{ color: colors.primaryTextColor, fontSize: 26 }}>
           Hello Navigation!
         </Text>
       </View>

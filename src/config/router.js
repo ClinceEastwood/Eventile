@@ -1,9 +1,10 @@
 import React from "react";
-import { TabNavigator } from "react-navigation";
+import { TabNavigator, StackNavigator } from "react-navigation";
 import { Icon } from "react-native-elements";
 
 import HomeScreen from "../screens/HomeScreen";
 import ChatScreen from "../screens/ChatScreen";
+import IntroScreen from "../screens/IntroScreen";
 
 export const Tabs = TabNavigator({
   Home: {
@@ -20,6 +21,21 @@ export const Tabs = TabNavigator({
       tabBarLabel: "List",
       tabBarIcon: () => <Icon name="chat" size={35} color={"green"} />,
       animationEnabled: true
+    }
+  }
+});
+
+export const Stack = StackNavigator({
+  Intro: {
+    screen: IntroScreen,
+    navigationOptions: {
+      header: null
+    }
+  },
+  App: {
+    screen: Tabs,
+    navigationOptions: {
+      title: "Eventile"
     }
   }
 });
