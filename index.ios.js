@@ -1,2 +1,4 @@
-import HomeScreen from "./src/App";
-const app = new HomeScreen();
+import { AppRegistry } from "react-native";
+import App from "./src/App";
+
+AppRegistry.registerComponent("Eventile", () => App);
