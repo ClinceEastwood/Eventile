@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { AppRegistry, Alert, Button, View } from "react-native";
 import AppIntro from "react-native-app-intro";
+import { colors } from "../assets/colors";
 
 export default class Intro extends Component {
   onSkipBtnHandle = index => {
@@ -21,27 +22,63 @@ export default class Intro extends Component {
   render() {
     const pageArray = [
       {
-        title: "Page 1",
-        description: "Description 1",
-        img: "https://goo.gl/Bnc3XP",
+        title: "Eventile",
+        description: "Organise your organising.",
+        img: require("../assets/EventileLogo.png"),
         imgStyle: {
-          height: 80 * 2.5,
-          width: 109 * 2.5
+          height: 125 * 2.5,
+          width: 125 * 2.5
         },
-        backgroundColor: "#fa931d",
-        fontColor: "#fff",
+        backgroundColor: colors.primaryColor,
+        fontColor: colors.secondaryTextColor,
         level: 2
       },
       {
-        title: "Page 2",
-        description: "Description 2",
-        img: require("../assets/laptop.jpg"),
+        title: "Create",
+        description: "Create a task that you need someone to take care of.",
+        img: require("../assets/BaseNote.png"),
         imgStyle: {
-          height: 93 * 2.5,
-          width: 103 * 2.5
+          height: 125 * 2.5,
+          width: 125 * 2.5
         },
-        backgroundColor: "#a4b602",
-        fontColor: "#fff",
+        backgroundColor: colors.secondaryColor,
+        fontColor: colors.secondaryTextColor,
+        level: 2
+      },
+      {
+        title: "Set a deadline",
+        description: "Set a date you need it done by",
+        img: require("../assets/deadlineNote.png"),
+        imgStyle: {
+          height: 125 * 2.5,
+          width: 125 * 2.5
+        },
+        backgroundColor: colors.secondaryColor,
+        fontColor: colors.secondaryTextColor,
+        level: 2
+      },
+      {
+        title: "Assign",
+        description: "Assign someone to complete that task.",
+        img: require("../assets/FinalNote.png"),
+        imgStyle: {
+          height: 125 * 2.5,
+          width: 125 * 2.5
+        },
+        backgroundColor: colors.tertiaryColor,
+        fontColor: colors.secondaryTextColor,
+        level: 2
+      },
+      {
+        title: "Avoid",
+        description: "Avoid any mix-ups or confusion",
+        img: require("../assets/EventileLogo.png"),
+        imgStyle: {
+          height: 125 * 2.5,
+          width: 125 * 2.5
+        },
+        backgroundColor: colors.complimentColor,
+        fontColor: colors.secondaryTextColor,
         level: 2
       }
     ];
